@@ -35,7 +35,8 @@ dt=pd.read_csv("/content/titanic_dataset.csv")
 dt
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/27aae021-a93c-4d62-8700-79b1beaba84e)
+![1](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/31bf379e-7009-4f01-b389-10d7219f5e17)
+
 ```
 dt.info()
 ```

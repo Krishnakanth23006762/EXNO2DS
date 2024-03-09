@@ -41,83 +41,92 @@ dt
 dt.info()
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/23c9a813-e29e-458e-b872-c0e96d2b75d4)
+![2](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/68b9de22-e0c9-4d92-8b2b-71df2449970e)
+
 ```
 dt.shape
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/9b3f8940-f34a-4efe-857c-5c3e286a59f2)
+![3](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/d44b1f32-cfed-48dc-9af0-880612ce5887)
+
 ```
 dt.set_index("PassengerId",inplace=True
 ```
 dt.describe()
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/603a6476-0b6e-4939-be1d-020a5411eb5a)
+![4](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/5b5cdae0-e600-4e79-a5ee-a093dd05f913)
+
 
 ```
 dt.nunique()
 ```
+![5](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/159c8ada-2997-41dd-95c6-ebfc7903ebf5)
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/e5e1049e-0421-4ed2-9d7c-15e0a7f0317b)
 
 ```
 dt["Survived"].value_counts()
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/19899d18-deb2-459d-8d6f-9610872d098f)
+![6](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/7bfa59bf-427e-4f80-addd-066864ac8ee6)
+
 ```
 per=(dt["Survived"].value_counts()/dt.shape[0]*100).round(2)
 per
 ```
+![7](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/a5e34476-2410-4bee-91be-5838149bfc26)
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/453f521f-e016-450a-823e-853513864c8a)
 ```
 sns.countplot(data=dt,x="Survived")
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/b38c5a88-9b85-4e68-a1fd-f25fb35da7d5)
+![8](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/dadcc2d4-cf89-4a5c-b846-dea3947cdab7)
+
 ```
 dt
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/75851857-515c-45a4-9ed0-f97bc501ac02)
+![9](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/83a72182-d4d7-44d9-9793-ce627edd878c)
+
 ```
 dt.Pclass.unique()
 ```
+![10](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/6a308d99-0179-43f1-bd66-1efe27a04414)
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/4868a17d-a4de-45c3-86e4-c769762d77ca)
 ```
 dt.rename(columns={'Sex':'Gender'},inplace=True)
 dt
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/822c7791-fb41-44bb-8c23-8b8d1a3d811c)
+![11](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/35a35ed4-0a8b-4164-8e46-6cda230f32db)
+
 
 ```
 sns.catplot(x="Gender",col="Survived",kind="count",data=dt,height=5, aspect=.7)
 ```
+![12](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/34dad3ae-65be-443c-b9d2-312f75d75334)
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/fdadc299-3453-47ae-86cd-8bd9e77120a1)
+
 ```
 sns.catplot(x='Survived',hue="Gender",data=dt,kind="count")
 ```
+![13](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/07b63315-6dda-4e75-9406-502c38d48cfa)
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/7fb380ba-e219-4d79-aa78-c9591ddcb8b6)
 ```
 dt.boxplot(column="Age",by="Survived")
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/c84bad98-5cd5-4faf-9d15-85d0645205d9)
+![14](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/f893e268-0980-4de1-b376-cc7fd8ec67fc)
+
 ```
 sns.scatterplot(x=dt["Age"],y=dt["Fare"])
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/089a4887-89a2-47b9-9f11-ef75e3016301)
+![15](https://github.com/Krishnakanth23006762/EXNO2DS/assets/138849446/25be6585-deb0-415a-a16c-1069102a891e)
+
 ```
 sns.jointplot(x="Age",y="Fare",data=dt)
 ```
 
-![image](https://github.com/23006823/EXNO2DS/assets/138971409/3b43d8e9-fb94-4e0f-ac9a-d31b70eaeb77)
 ```
 import matplotlib.pyplot as plt
 fig, ax1=plt.subplots(figsize=(8,5))
